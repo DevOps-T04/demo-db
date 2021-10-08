@@ -62,7 +62,7 @@ if(mysqli_connect_errno()){
           <?php
           $query = "SELECT id, strName FROM stores LIMIT 10;";
           $res = mysqli_query($db, $query);
-          echo "<h1>Here's a list of 10 stores fetched from 'thecbpmgmt'.stores</h1>";
+          echo "<h1>Here's a list of 10 stores fetched from '".$dbName."'.stores</h1>";
           while($row = mysqli_fetch_assoc($res) ){
                   echo "<tr>";
                   echo "  <td>".$row['id']."</td>";
